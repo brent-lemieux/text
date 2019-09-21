@@ -48,7 +48,7 @@ clf.label_csv('./data/unlabeled.csv')
 ```
 
 ## Methodology
-The goal of this project is to categorize product codes for grocery store items. To solve this problem, I chose to use (fastText)[https://fasttext.cc/], a text-classification algorithm from Facebook Open Source. The algorithm represents words, subwords, and n-grams
+The goal of this project is to categorize product codes for grocery store items. To solve this problem, I chose to use [fastText](https://fasttext.cc/), a text-classification algorithm from Facebook Open Source. The algorithm represents words, subwords, and n-grams
 
 
 
