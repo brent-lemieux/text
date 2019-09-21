@@ -53,9 +53,23 @@ The goal of this project is to categorize product receipt names for grocery stor
 **fastText overview**
 The algorithm represents words, character n-grams, and word n-grams, as vectors. The vectors are called word embeddings. It then averages the word/n-gram embeddings for each document, or product receipt names in this case, to obtain the items feature vector. Once the feature vectors are computed, the algorithm uses multinomial logistic regression to classify the product receipt names.
 
-I selected fastText for a number of reasons.
-1. **Accuracy and speed:** According to fastText's creators, "Our experiments show that our fast text classifier fastText is often on par with deep learning classifiers in terms of accuracy, and many orders of magnitude faster for training and evaluation."
 
-I found the algorithm's results to be quite good. With a little bit of tuning, the model correctly classified an items category ~87% of the time in cross-validation tests. Training the model took only a few seconds. More on results later.
-2. **Easy to use Python API:** With limited time to work on the problem, I knew I needed a solution that was easy to implement. fastText is easy to work without sacrificing much (if any) in terms of predictive power.
-3. **Subword embeddings:** As noted in the instructions, "Grocery store receipts often contain abbreviated, and even cryptic, language representing the products that have been sold." Because of the abbreviations and cryptic language, I knew embeddings at the word level would not be adequate. I needed a model that implemented subword embeddings, as well as single word and word n-gram embeddings.
+I selected fastText for a number of reasons.
+1. Accuracy and speed
+2. Easy to use Python API
+3. Subword embeddings
+
+
+**Accuracy and speed**
+
+According to fastText's creators, "Our experiments show that our fast text classifier fastText is often on par with deep learning classifiers in terms of accuracy, and many orders of magnitude faster for training and evaluation." I found the algorithm's results to be quite good. With a little bit of tuning, the model correctly classified an items category ~87% of the time in cross-validation tests. Training the model took only a few seconds. More on results later.
+
+
+**Easy to use Python API**
+
+With limited time to work on the problem, I knew I needed a solution that was easy to implement. fastText is easy to work without sacrificing much (if any) in terms of predictive power.
+
+
+**Subword embeddings**
+
+As noted in the instructions, "Grocery store receipts often contain abbreviated, and even cryptic, language representing the products that have been sold." Because of the abbreviations and cryptic language, I knew embeddings at the word level would not be adequate. I needed a model that implemented subword embeddings, as well as single word and word n-gram embeddings.
