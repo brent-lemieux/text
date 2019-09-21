@@ -1,6 +1,8 @@
 # Answers
 
 ## Part One - Debugging
+To demonstrate that the updated function works as intended, navigate to `./part_one` and run the command `py.test`.
+
 There are several issues and inefficiencies in the original `inner_median` function.
 
 ### Issues
@@ -25,6 +27,9 @@ The goal of this project is to categorize products from grocery store receipts i
 * `fasttext`
 
 **Example:**
+
+The code for this section is contained in `./part_two`
+
 ```python
 from product_classifier import ProductClassifier
 
@@ -74,7 +79,7 @@ With limited time to work on the problem, I knew I needed a solution that was ea
 #### Subword embeddings
 As noted in the instructions, "Grocery store receipts often contain abbreviated, and even cryptic, language representing the products that have been sold." Mainly because of the sometimes cryptic language, I thought embeddings at the character or subword level would improve the quality of predictions. Luckily, fastText implements word, subword, and word n-gram embeddings. This theory proved accurate. When allowing for subword embeddings of 2 or more characters, as well as word and word n-gram embeddings, model performance improved significantly.
 
-For example, using subword embeddings, the model can relate different yogurt products like `OIKOS YOGURT`, `OIKOSYOG`, and `YOPLT YOGU`.
+For example, using subword embeddings, the model can more easily relate different yogurt products like `OIKOS YOGURT`, `OIKOSYOG`, and `YOPLT YOGU`.
 
 ### Model Results
 I was very happy with the model results given the limited time. After a little bit of time spent hyper-parameter tuning, the average cross-validation accuracy of the model was 87%, meaning the model selected the appropriate category 87% of the time. There was only a small amount of variance in the results from fold to fold in the cross-validation tests.
