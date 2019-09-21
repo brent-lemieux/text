@@ -1,0 +1,10 @@
+**/data
+**/models
+**/__MACOSX
+**/__pycache__
+**/pytest_cache
+**/.ipynb_checkpoints
+
+*.ipynb
+*.json
+*.pyc
