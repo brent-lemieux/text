@@ -53,12 +53,12 @@ clf.label_csv('./data/unlabeled.csv')
 ```
 
 ### Methodology and Approach
-My approach to this problem was to:
+The goal of this project is to categorize product receipt names for grocery store items. My approach to this problem was to:
 1. Explore the data, think about the problem, and read up on how others have solved similar problems.
 2. Select a model.
 3. Iterate on different modeling decisions, including hyper-parameter selection and text preprocessing -- testing each iteration with cross-validation.
 
-The goal of this project is to categorize product receipt names for grocery store items. To solve this problem, I chose to use [fastText](https://fasttext.cc/), a text-classification algorithm from Facebook Open Source.
+To solve this problem, I chose to use [fastText](https://fasttext.cc/), a text-classification algorithm from Facebook Open Source.
 
 #### fastText overview
 The algorithm represents words, character n-grams, and word n-grams, as vectors. The vectors are called word embeddings. It then averages the word/n-gram embeddings for each document, or product receipt names in this case, to obtain the items feature vector. Once the feature vectors are computed, the algorithm uses multinomial logistic regression to classify the product receipt names.
