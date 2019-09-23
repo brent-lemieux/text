@@ -1,7 +1,7 @@
 # Answers
 
 ## Part One - Debugging
-To demonstrate that the updated function works as intended, navigate to `./part_one` and run the command `py.test`.
+To demonstrate that the updated function works as intended, navigate to `part_one/` and run the command `py.test`.
 
 There are several issues and inefficiencies in the original `inner_median` function.
 
@@ -28,7 +28,7 @@ The goal of this project is to categorize products from grocery store receipts i
 
 **Example:**
 
-The code for this section is contained in `./part_two`
+The code for this section is contained in `part_two/`
 
 ```python
 from product_classifier import ProductClassifier
@@ -100,7 +100,7 @@ I would choose to implement this data product as a real-time API. This would ope
 
 #### Steps required to put this solution in production
 1. Communicate with the application engineers to understand what data is available in real-time and the format of that data.
-2. Develop an endpoint for the model in SageMaker and integrate it with API Gateway.
+2. Develop an endpoint for the model in SageMaker, using the Blazing Text container, and integrate it with API Gateway.
 3. Write tests that call the API to ensure that it takes data in, and returns data, in the required format.
 4. Perform load testing to ensure that the API remains performant at the upper bounds of expected concurrent requests.
 5. Run integration tests, or work with the application engineers to ensure that the API works as expected with the application.
