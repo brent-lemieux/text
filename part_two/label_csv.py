@@ -17,7 +17,7 @@ def main():
     # Log cross-validation metrics.
     clf.cross_validate('./data/labeled.csv', n_cv_splits=3, log_results=True)
     # Train model using labeled data.
-    clf.fit('./data/labeled.csv')
+    clf.fit('./data/labeled.csv', save_model=True)
     # Use model to label unlabeled data.
     clf.label_csv('./data/unlabeled.csv')
 
