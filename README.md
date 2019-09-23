@@ -77,7 +77,7 @@ I found the algorithm's results to be quite good. With a little bit of tuning, t
 With limited time to work on the problem, I knew I needed a solution that was easy to implement. fastText is easy to use without sacrificing much (if any) predictive power.
 
 #### Subword embeddings
-As noted in the instructions, "Grocery store receipts often contain abbreviated, and even cryptic, language representing the products that have been sold." Mainly because of the sometimes cryptic language, I thought embeddings at the character or subword level would improve the quality of predictions. Luckily, fastText implements word, subword, and word n-gram embeddings. This theory proved accurate. When allowing for subword embeddings of 2 or more characters, as well as word and word n-gram embeddings, model performance improved significantly.
+As noted in the instructions, "Grocery store receipts often contain abbreviated, and even cryptic, language representing the products that have been sold." Mainly because of the sometimes cryptic language, I thought embeddings at the character or subword level would improve the quality of predictions. Luckily, fastText implements word, subword, and word n-gram embeddings. This theory proved accurate. When allowing for subword embeddings of two or more characters, as well as whole word embeddings, model performance improved significantly.
 
 For example, using subword embeddings, the model can more easily relate different yogurt products like `OIKOS YOGURT`, `OIKOSYOG`, and `YOPLT YOGU`.
 
